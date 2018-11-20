@@ -9,20 +9,26 @@
 /* Begin PBXBuildFile section */
 		0344AAAC956DD031BA292E74 /* Pods_GrpApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E71854ABD48A8692922FA10 /* Pods_GrpApp.framework */; };
 		5A92C96721A2E74B003B0AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C96621A2E74B003B0AE9 /* AppDelegate.swift */; };
-		5A92C96921A2E74B003B0AE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C96821A2E74B003B0AE9 /* ViewController.swift */; };
+		5A92C96921A2E74B003B0AE9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C96821A2E74B003B0AE9 /* WelcomeViewController.swift */; };
 		5A92C96C21A2E74B003B0AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A92C96A21A2E74B003B0AE9 /* Main.storyboard */; };
 		5A92C96E21A2E74E003B0AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A92C96D21A2E74E003B0AE9 /* Assets.xcassets */; };
 		5A92C97121A2E74E003B0AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A92C96F21A2E74E003B0AE9 /* LaunchScreen.storyboard */; };
+		5A92C97921A40843003B0AE9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C97821A40843003B0AE9 /* RegisterViewController.swift */; };
+		5A92C97B21A40886003B0AE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C97A21A40886003B0AE9 /* LoginViewController.swift */; };
+		5A92C97D21A408C7003B0AE9 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C97C21A408C7003B0AE9 /* GroupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A92C96321A2E74B003B0AE9 /* GrpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A92C96621A2E74B003B0AE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A92C96821A2E74B003B0AE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A92C96821A2E74B003B0AE9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5A92C96B21A2E74B003B0AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A92C96D21A2E74E003B0AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A92C97021A2E74E003B0AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A92C97221A2E74E003B0AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A92C97821A40843003B0AE9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5A92C97A21A40886003B0AE9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5A92C97C21A408C7003B0AE9 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		881DF01145DD37E3B8A96698 /* Pods-GrpApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrpApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrpApp/Pods-GrpApp.release.xcconfig"; sourceTree = "<group>"; };
 		8E71854ABD48A8692922FA10 /* Pods_GrpApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrpApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41506B8CC1CBC9DB4447D0B /* Pods-GrpApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrpApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrpApp/Pods-GrpApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,13 +68,32 @@
 			isa = PBXGroup;
 			children = (
 				5A92C96621A2E74B003B0AE9 /* AppDelegate.swift */,
-				5A92C96821A2E74B003B0AE9 /* ViewController.swift */,
-				5A92C96A21A2E74B003B0AE9 /* Main.storyboard */,
+				5A92C97F21A4096B003B0AE9 /* View */,
+				5A92C97E21A40947003B0AE9 /* Controller */,
 				5A92C96D21A2E74E003B0AE9 /* Assets.xcassets */,
 				5A92C96F21A2E74E003B0AE9 /* LaunchScreen.storyboard */,
 				5A92C97221A2E74E003B0AE9 /* Info.plist */,
 			);
 			path = GrpApp;
+			sourceTree = "<group>";
+		};
+		5A92C97E21A40947003B0AE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A92C96821A2E74B003B0AE9 /* WelcomeViewController.swift */,
+				5A92C97C21A408C7003B0AE9 /* GroupViewController.swift */,
+				5A92C97A21A40886003B0AE9 /* LoginViewController.swift */,
+				5A92C97821A40843003B0AE9 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5A92C97F21A4096B003B0AE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A92C96A21A2E74B003B0AE9 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D1E66EDCA18F740778517169 /* Frameworks */ = {
@@ -222,8 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A92C96921A2E74B003B0AE9 /* ViewController.swift in Sources */,
+				5A92C97B21A40886003B0AE9 /* LoginViewController.swift in Sources */,
+				5A92C97921A40843003B0AE9 /* RegisterViewController.swift in Sources */,
+				5A92C96921A2E74B003B0AE9 /* WelcomeViewController.swift in Sources */,
 				5A92C96721A2E74B003B0AE9 /* AppDelegate.swift in Sources */,
+				5A92C97D21A408C7003B0AE9 /* GroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
