@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import SVProgressHUD
+import ChameleonFramework
 
 class WelcomeViewController: UIViewController {
 
@@ -16,5 +19,16 @@ class WelcomeViewController: UIViewController {
     }
 
 
+    @IBAction func newUserButtonPressed(_ sender: UIButton) {
+        
+     performSegue(withIdentifier: "goToRegister", sender: self)
+    }
+    
+    
+    @IBAction func existingUserButtonPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "goToLogin", sender: self)
+    }
+    
 }
 
