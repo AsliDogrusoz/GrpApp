@@ -12,9 +12,9 @@ import SVProgressHUD
 import ChameleonFramework
 
 class RegisterViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
-
+    
     @IBOutlet weak var passwordTextField: UITextField!
     
     /*
@@ -32,12 +32,37 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        
     }
-
+    
     //MARK: - Add New User
     
-    @IBAction func registerPressed(_ sender: UIButton) {
+    
+    
+    @IBAction func registerPressed(_ sender: Any) {
+        
+        SVProgressHUD.show()
+        
+        
+        //TODO: Set up a new user on our Firebase database
+        
+        
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error != nil {
+                print("User registration error detected: \(error!)")
+            }
+            else {
+                print("Registration successful!")
+                
+                SVProgressHUD.dismiss()
+                
+                self.performSegue(withIdentifier: "goToGroup", sender: self)
+            }
+        }
     }
-
-
-}
+        
+    }
+    
+    

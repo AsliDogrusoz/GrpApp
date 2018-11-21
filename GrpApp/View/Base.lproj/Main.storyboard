@@ -39,8 +39,7 @@
                                                     <color key="titleColor" red="1" green="0.296232141" blue="0.30793530180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="newUserButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DHg-y8-6Ev"/>
-                                                    <segue destination="ng8-Pg-grG" kind="show" identifier="goToRegister" id="BEA-DW-1f5"/>
+                                                    <segue destination="ng8-Pg-grG" kind="show" identifier="goToRegistration" id="FZE-Bx-xW3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTe-3O-emh">
@@ -55,8 +54,7 @@
                                                     <color key="titleColor" red="1" green="0.296232141" blue="0.30793530180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="existingUserButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cT-if-0Nz"/>
-                                                    <segue destination="z7O-WP-sGm" kind="show" identifier="goToLogin" id="gro-sI-Vf7"/>
+                                                    <segue destination="z7O-WP-sGm" kind="show" identifier="goToLogin" id="JQi-Ua-N8e"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -145,8 +143,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginPressed:" destination="z7O-WP-sGm" eventType="touchUpInside" id="1cS-xb-toz"/>
-                                            <segue destination="k85-0n-hdj" kind="show" identifier="goToGroup" id="2Ah-57-nTa"/>
+                                            <action selector="loginPressed:" destination="z7O-WP-sGm" eventType="touchUpInside" id="09I-hf-E92"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -179,7 +176,7 @@
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -220,6 +217,7 @@
                     <connections>
                         <outlet property="password" destination="7MN-EF-ygX" id="YHz-5z-Wy2"/>
                         <outlet property="username" destination="8wt-EV-4gN" id="bV5-N0-xOb"/>
+                        <segue destination="k85-0n-hdj" kind="show" identifier="goToGroup" id="7Ch-ub-GJy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pvk-yv-3MR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,7 +259,7 @@
                                                 </constraints>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -294,8 +292,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="registerPressed:" destination="ng8-Pg-grG" eventType="touchUpInside" id="2xN-iE-2Co"/>
-                                            <segue destination="k85-0n-hdj" kind="show" identifier="goToGroup" id="ION-Pg-J6i"/>
+                                            <action selector="registerPressed:" destination="ng8-Pg-grG" eventType="touchUpInside" id="3dW-IQ-IaL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -325,6 +322,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="eqt-uS-dBg" id="8RV-sm-U09"/>
                         <outlet property="passwordTextField" destination="cmj-Z5-AKJ" id="w5H-cK-z1p"/>
+                        <segue destination="k85-0n-hdj" kind="show" identifier="goToGroup" id="InG-cf-hS5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfz-4c-gcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -352,6 +350,6 @@
         <image name="Pebbles" width="816" height="1088"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Ah-57-nTa"/>
+        <segue reference="7Ch-ub-GJy"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -38,8 +38,33 @@ class LoginViewController: UIViewController {
     //MARK: - Login user
     
     @IBAction func loginPressed(_ sender: Any) {
+        
+        SVProgressHUD.show()
+        
+        //TODO: Log in the user
+        
+        
+        Auth.auth().signIn(withEmail: username.text!, password: password.text!) {(user, error) in
+            if error != nil {
+                print("Login error detected: \(error!)")
+            }
+            else {
+                print("Login successful!")
+                
+                SVProgressHUD.dismiss()
+                
+                self.performSegue(withIdentifier: "goToGroup", sender: self)
+            }
+        }
     }
     
+    
+    
+        
+        
+    }
+    
+        
 
+    
 
-}
