@@ -42,7 +42,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerPressed(_ sender: Any) {
         
-//        var alert: UIAlertController
+                var msg: String = ""
         
         SVProgressHUD.show()
         
@@ -55,7 +55,21 @@ class RegisterViewController: UIViewController {
             if error != nil {
                 print("User registration error detected: \(error!)")
                 
-                let alert = UIAlertController(title: "Registration error", message: "Username exists, please choose another username or login", preferredStyle: .alert)
+                switch error {
+                case .some(let error as NSError) where error.code == AuthErrorCode.weakPassword.rawValue:
+                    msg = "weak password"
+                case .some(let error as NSError) where error.code == AuthErrorCode.emailAlreadyInUse.rawValue:
+                    msg = "username already in use, please login or try a different username"
+                case .some(let error as NSError) where error.code == AuthErrorCode.invalidEmail.rawValue:
+                    msg = "invalid email, please retry"
+                case .some(let error):
+                    print("Registration error: \(error.localizedDescription)")
+                    msg = "registration error"
+                case .none:
+                    print("\(user)")
+                }
+                
+                let alert = UIAlertController(title: "Registration error", message: msg, preferredStyle: .alert)
                 
                 let restartAction = UIAlertAction(title: "OK", style: .default, handler: { UIAlertAction in
                     
@@ -81,33 +95,7 @@ class RegisterViewController: UIViewController {
             }
         }
     }
-    
-//    func handleRegistrationAlert(err: AuthErrors) {
-//
-//        let errCode = AuthErrorCode(rawValue: 0)
-//
-//        switch errCode {
-//
-//        case .emailAlreadyInUse?:
-//
-//            let alert = UIAlertController(title: "Registration error", message: "Username exists, please choose another username or login", preferredStyle: .alert)
-//
-//
-//        case .weakPassword?:
-//            let alert = UIAlertController(title: "Registration error", message: "Please choose a strong password", preferredStyle: .alert)
-//
-//        default:
-//            let alert = UIAlertController(title: "Registration error", message: "Problem registering user, please retry", preferredStyle: .alert)
-//
-//        }
-//
-//
-//
-//
-//    }
-    
-    
-    
+
 }
 
 
