@@ -217,7 +217,7 @@
                     <connections>
                         <outlet property="password" destination="7MN-EF-ygX" id="YHz-5z-Wy2"/>
                         <outlet property="username" destination="8wt-EV-4gN" id="bV5-N0-xOb"/>
-                        <segue destination="k85-0n-hdj" kind="show" identifier="goToGroup" id="7Ch-ub-GJy"/>
+                        <segue destination="NNM-Cs-48Z" kind="show" identifier="goToGroup" id="Jzp-9y-DbB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pvk-yv-3MR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -322,7 +322,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="eqt-uS-dBg" id="8RV-sm-U09"/>
                         <outlet property="passwordTextField" destination="cmj-Z5-AKJ" id="w5H-cK-z1p"/>
-                        <segue destination="k85-0n-hdj" kind="show" identifier="goToGroup" id="InG-cf-hS5"/>
+                        <segue destination="NNM-Cs-48Z" kind="show" identifier="goToGroup" id="w8V-Sh-f0e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfz-4c-gcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,19 +330,51 @@
             <point key="canvasLocation" x="237.59999999999999" y="-19.95073891625616"/>
         </scene>
         <!--Group View Controller-->
-        <scene sceneID="37f-8e-2bz">
+        <scene sceneID="awc-1b-c9R">
             <objects>
-                <viewController storyboardIdentifier="GroupViewController" id="k85-0n-hdj" customClass="GroupViewController" customModule="GrpApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9Re-g1-SJs">
+                <tableViewController id="3g1-Dh-t92" userLabel="Group View Controller" customClass="GroupViewController" customModule="GrpApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wy9-Lh-dIr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.38872520271819777" green="0.59818060337426182" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="kGp-Qd-yK2"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SM7-mE-EfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IDy-GH-XIa">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IDy-GH-XIa" id="wMw-F8-e2S">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3g1-Dh-t92" id="vGa-lS-efq"/>
+                            <outlet property="delegate" destination="3g1-Dh-t92" id="2Dv-Cp-fI5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9aC-9l-Fmr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gna-XL-nQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="143"/>
+            <point key="canvasLocation" x="2119.1999999999998" y="302.6986506746627"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tyf-hx-NeQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NNM-Cs-48Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KNH-Sg-LRf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3g1-Dh-t92" kind="relationship" relationship="rootViewController" id="KVa-b7-c5t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ee0-tG-I8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="302.6986506746627"/>
         </scene>
     </scenes>
     <resources>
@@ -350,6 +382,6 @@
         <image name="Pebbles" width="816" height="1088"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="InG-cf-hS5"/>
+        <segue reference="Jzp-9y-DbB"/>
     </inferredMetricsTieBreakers>
 </document>

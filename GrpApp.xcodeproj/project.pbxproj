@@ -18,7 +18,8 @@
 		5A92C97121A2E74E003B0AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A92C96F21A2E74E003B0AE9 /* LaunchScreen.storyboard */; };
 		5A92C97921A40843003B0AE9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C97821A40843003B0AE9 /* RegisterViewController.swift */; };
 		5A92C97B21A40886003B0AE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C97A21A40886003B0AE9 /* LoginViewController.swift */; };
-		5A92C97D21A408C7003B0AE9 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92C97C21A408C7003B0AE9 /* GroupViewController.swift */; };
+		5A945EA221AC0CF700A5FB06 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A945EA121AC0CF700A5FB06 /* Person.swift */; };
+		5ACE61B721B2BF6400B4688C /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACE61B621B2BF6400B4688C /* GroupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +35,8 @@
 		5A92C97221A2E74E003B0AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A92C97821A40843003B0AE9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5A92C97A21A40886003B0AE9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		5A92C97C21A408C7003B0AE9 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		5A945EA121AC0CF700A5FB06 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		5ACE61B621B2BF6400B4688C /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		881DF01145DD37E3B8A96698 /* Pods-GrpApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrpApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrpApp/Pods-GrpApp.release.xcconfig"; sourceTree = "<group>"; };
 		8E71854ABD48A8692922FA10 /* Pods_GrpApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrpApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C41506B8CC1CBC9DB4447D0B /* Pods-GrpApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrpApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrpApp/Pods-GrpApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				5A29012621A53A26007274A3 /* Group.swift */,
+				5A945EA121AC0CF700A5FB06 /* Person.swift */,
 				5A29012821A53A89007274A3 /* Expense.swift */,
 			);
 			path = Model;
@@ -98,9 +101,9 @@
 			children = (
 				5A92C96621A2E74B003B0AE9 /* AppDelegate.swift */,
 				5A92C96821A2E74B003B0AE9 /* WelcomeViewController.swift */,
-				5A92C97C21A408C7003B0AE9 /* GroupViewController.swift */,
 				5A92C97A21A40886003B0AE9 /* LoginViewController.swift */,
 				5A92C97821A40843003B0AE9 /* RegisterViewController.swift */,
+				5ACE61B621B2BF6400B4688C /* GroupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,13 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ACE61B721B2BF6400B4688C /* GroupViewController.swift in Sources */,
 				5A29012921A53A89007274A3 /* Expense.swift in Sources */,
 				5A92C97B21A40886003B0AE9 /* LoginViewController.swift in Sources */,
 				5A92C97921A40843003B0AE9 /* RegisterViewController.swift in Sources */,
 				5A92C96921A2E74B003B0AE9 /* WelcomeViewController.swift in Sources */,
 				5A29012721A53A26007274A3 /* Group.swift in Sources */,
 				5A92C96721A2E74B003B0AE9 /* AppDelegate.swift in Sources */,
-				5A92C97D21A408C7003B0AE9 /* GroupViewController.swift in Sources */,
+				5A945EA221AC0CF700A5FB06 /* Person.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

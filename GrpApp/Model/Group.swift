@@ -12,8 +12,7 @@ class Group  {
     
     var groupID: String = ""
     var owner: String = ""
-//    var creationDate: Date?
-    var categories = [String]()
-    var currencies = [String]()
+    var categoriesInGroup = [String]()
+    var currenciesInGroup = [String]()
     
 }

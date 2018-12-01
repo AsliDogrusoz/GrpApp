@@ -42,7 +42,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerPressed(_ sender: Any) {
         
-                var msg: String = ""
+        var msg: String = ""
         
         SVProgressHUD.show()
         
@@ -91,11 +91,28 @@ class RegisterViewController: UIViewController {
                 
                 SVProgressHUD.dismiss()
                 
+//                Create new person
+                
+                let currentUser = Person()
+                currentUser.userID = self.emailTextField.text!
+                currentUser.groupsBelonged = []
+                currentUser.expensesMade = []
+                
                 self.performSegue(withIdentifier: "goToGroup", sender: self)
             }
         }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGroup" {
+            //            This also works:
+//            let destinationVC = segue.destination as! GroupViewController
+            let destinationVC = GroupViewController.self
+            print("preparing for segue")
+            
+        }
+    }
+    
 }
 
 
